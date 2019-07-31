@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <router-view/>
+    
   </div>
 </template>
 
@@ -8,6 +9,7 @@
 *{
   margin: 0;
   padding: 0;
+	cursor: default;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

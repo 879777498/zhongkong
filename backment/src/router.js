@@ -7,7 +7,8 @@ Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  base: process.env.BASE_URL,
+  // mode: 'hash',
+  base: '/',
   routes: [
     {
       path: '/',
@@ -17,7 +18,10 @@ export default new Router({
     {
       path: '/home',
       name: 'home',
-      component: Home
+      component: Home,
+      meta:{
+        login:true
+      }
     },
   ]
 })

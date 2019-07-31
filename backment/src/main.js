@@ -7,7 +7,12 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import VueQuillEditor from 'vue-quill-editor'
 Vue.use(VueQuillEditor)
-
+const eventBus = {
+  install(Vue,options) {
+      Vue.prototype.$bus = new Vue()
+  }
+};
+Vue.use(eventBus);
 Vue.use(ElementUI);
 //定义全局变量
 Vue.prototype.$api=api
